@@ -51,7 +51,7 @@ export const getMessages = async room_id => {
 
 export const createWebSocketConnection = (room_id, username) => {
   const socket = new WebSocket(
-    `ws://chat-api-k4vi.onrender.com/ws/${room_id}/${username}`,
+    `wss://chat-api-k4vi.onrender.com/ws/${room_id}/${username}`,
   );
 
   socket.onopen = () => {
